@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const GifGrid = ({ category }) => {
+  const [count, setCount] = useState(0);
+
   const getGifs = async () => {
     const url =
       "https://api.giphy.com/v1/gifs/search?q=Rick and Morty&limit=10&api_key=Z2OW4NYMpLCg45YT4B2wLn2jnpWy1RUY";
@@ -23,6 +25,8 @@ export const GifGrid = ({ category }) => {
   return (
     <div>
       <h3>{category}</h3>
+      <h3>{count}</h3>
+      <button onClick={() => setCount(count + 1)}></button>
     </div>
   );
 };
