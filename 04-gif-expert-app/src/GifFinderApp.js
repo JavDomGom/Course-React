@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
-export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
+export const GifFinderApp = () => {
+  const [categories, setCategories] = useState(["Grateful Dead"]);
 
   return (
     <>
-      <h2>GifExpertApp</h2>
+      <h2>GifFinderApp</h2>
       <AddCategory setCategories={setCategories} />
 
       <hr />
